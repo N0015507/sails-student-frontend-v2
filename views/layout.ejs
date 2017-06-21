@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="bg">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,10 +18,17 @@
         <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
         <!-- INCLUDE STYLES HERE END -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.12/b-1.2.2/b-print-1.2.2/cr-1.3.2/datatables.min.css"/>
 
     </head>
-    <body>
+    <style>
+    body, html {
+        height: 100%;
+    }
 
+    </style>
+    <body class="bg">
+    <div id="baseBackGround">
         <!-- Fixed navbar -->
         <%- partial ('partials/navigation.ejs') %>
 
@@ -40,12 +47,31 @@
 
             <!--jquery-ui js-->
             <script type="text/javascript" src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+            <script type="text/javascript" src="https://cdn.datatables.net/v/bs/jszip-2.5.0/pdfmake-0.1.18/dt-1.10.12/b-1.2.2/b-html5-1.2.2/b-print-1.2.2/cr-1.3.2/datatables.min.js"></script>
 
             <!--custom js (your work)-->
+            <script src="js/manage_grades.js"></script>
+            <script src="js/manage_class.js"></script>
+            <script src="js/manage_assignments.js"></script>
+            <script src="js/manage_instructors.js"></script>
             <script src="js/manage_students.js"></script>
+            <script src="js/manage_student_class.js"></script>
+            <script src="js/manage_majors.js"></script>
+            <script src="js/manage_major_class.js"></script>
 
-        <!-- INCLUDE JS LIBRARIES HERE END -->
+            <!-- INCLUDE JS LIBRARIES HERE END -->
 
-    </body>
+    <!-- <script>
+    (function() {
+
+            $(".bgChange").click(function(e){
+                e.preventDefault();
+                console.log("in click");
+                $("#baseBackGround").css('background-image', 'none');
+                return true;
+            });
+
+    })();
+    </script> -->
+    </div></body>
 </html>
